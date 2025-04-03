@@ -15,7 +15,8 @@ namespace Mission90MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            //return View();
+            return RedirectToAction("Index", "Category");
         }
 
         public IActionResult Privacy()

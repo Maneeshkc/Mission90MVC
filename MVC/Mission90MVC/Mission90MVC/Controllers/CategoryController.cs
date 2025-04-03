@@ -13,7 +13,7 @@ namespace Mission90MVC.Controllers
         public IActionResult Index()
         {
             var items = _unitOfWork.Category.GetAll();
-            return View();
+            return View(items);
         }
     }
 }
