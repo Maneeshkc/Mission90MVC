@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MVC/Mission90MVC/Mission90MVC/obj
+/MVC/Mission90MVC/.vs/Mission90MVC
