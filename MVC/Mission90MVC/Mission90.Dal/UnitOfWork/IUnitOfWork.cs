@@ -11,6 +11,6 @@ namespace Mission90.Dal.UnitOfWork
     {
         void Commit();
 
-        ICategoryRepository CategoryRepository { get; }
+        ICategoryRepository Category { get; }
     }
 }

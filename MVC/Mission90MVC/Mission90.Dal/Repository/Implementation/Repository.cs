@@ -15,7 +15,7 @@ namespace Mission90.Dal.Repository.Implementation
         private readonly DbSet<T> _dbSet;
         public Repository(Mission90Context context)
         {
-          _dbSet=context.Set<T>();  
+            _dbSet = context.Set<T>();
         }
         public void Create(T entity)
         {
@@ -24,7 +24,7 @@ namespace Mission90.Dal.Repository.Implementation
 
         public T Get(Expression<Func<T, bool>> exp)
         {
-         return   _dbSet.Where(exp).FirstOrDefault();
+            return _dbSet.Where(exp).FirstOrDefault();
         }
 
         public IEnumerable<T> GetAll()
@@ -34,7 +34,7 @@ namespace Mission90.Dal.Repository.Implementation
 
         public void Remove(T entity)
         {
-           _dbSet.Remove(entity);
+            _dbSet.Remove(entity);
         }
     }
 }

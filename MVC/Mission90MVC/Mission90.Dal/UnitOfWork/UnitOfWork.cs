@@ -15,8 +15,9 @@ namespace Mission90.Dal.UnitOfWork
         public UnitOfWork(Mission90Context context) 
         {
             _context = context;
+            Category= new CategoryRepository(context);
         }
-        public ICategoryRepository CategoryRepository => new CategoryRepository(_context);
+        public ICategoryRepository Category { get; }
 
         public void Commit()
         {

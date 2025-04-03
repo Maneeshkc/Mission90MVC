@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mission90.Dal.Repository.Implementation
 {
-    public class CategoryRepository :Repository<Category>, ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         private readonly Mission90Context _context;
         public CategoryRepository(Mission90Context context) : base(context)
