@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Mission90.Dal.Models;
 using Mission90.Dal.UnitOfWork;
 
 namespace Mission90MVC.Controllers
@@ -12,7 +13,7 @@ namespace Mission90MVC.Controllers
         }
         public IActionResult Index()
         {
-            var items = _unitOfWork.Category.GetAll();
+            List<Category> items = _unitOfWork.Category.GetAll().ToList();
             return View(items);
         }
     }

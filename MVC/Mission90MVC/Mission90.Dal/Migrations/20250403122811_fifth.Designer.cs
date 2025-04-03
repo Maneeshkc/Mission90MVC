@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mission90.Dal.Contexts;
 
@@ -10,9 +11,11 @@ using Mission90.Dal.Contexts;
 namespace Mission90.Dal.Migrations
 {
     [DbContext(typeof(Mission90Context))]
-    partial class Mission90ContextModelSnapshot : ModelSnapshot
+    [Migration("20250403122811_fifth")]
+    partial class fifth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

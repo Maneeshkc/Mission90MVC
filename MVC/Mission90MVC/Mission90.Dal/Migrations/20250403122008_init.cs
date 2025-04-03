@@ -5,7 +5,7 @@
 namespace Mission90.Dal.Migrations
 {
     /// <inheritdoc />
-    public partial class Initalesetup : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace Mission90.Dal.Migrations
                     Category_Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Category_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DisplayOrder = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    DisplayOrder = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

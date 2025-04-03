@@ -11,8 +11,8 @@ using Mission90.Dal.Contexts;
 namespace Mission90.Dal.Migrations
 {
     [DbContext(typeof(Mission90Context))]
-    [Migration("20250403083754_Initalesetup")]
-    partial class Initalesetup
+    [Migration("20250403122253_fourth")]
+    partial class fourth
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,16 +32,43 @@ namespace Mission90.Dal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Category_Id"));
 
-                    b.Property<string>("Category_Name")
+                    b.Property<string>("CategoryName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Category_Name");
 
-                    b.Property<string>("DisplayOrder")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("DisplayOrder")
+                        .HasColumnType("int");
 
                     b.HasKey("Category_Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Category_Id = 1,
+                            CategoryName = "test1",
+                            DisplayOrder = 1
+                        },
+                        new
+                        {
+                            Category_Id = 2,
+                            CategoryName = "test2",
+                            DisplayOrder = 2
+                        },
+                        new
+                        {
+                            Category_Id = 3,
+                            CategoryName = "test3",
+                            DisplayOrder = 3
+                        },
+                        new
+                        {
+                            Category_Id = 4,
+                            CategoryName = "test3",
+                            DisplayOrder = 3
+                        });
                 });
 #pragma warning restore 612, 618
         }

@@ -12,7 +12,7 @@
                 @Html.DisplayNameFor(model => model.Category_Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category_Name)
+                @Html.DisplayNameFor(model => model.CategoryName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DisplayOrder)
@@ -21,22 +21,17 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.OrderBy(x=>x.DisplayOrder)) {
         <tr>
             <td>
                 @item.Category_Id
             </td>
             <td>
-                @item.Category_Name
+                @item.CategoryName
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DisplayOrder)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+            </td>           
         </tr>
 }
     </tbody>

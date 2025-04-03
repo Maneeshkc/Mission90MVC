@@ -12,7 +12,7 @@ namespace Mission90.Dal.Models
         [Key]
         public int Category_Id { get; set; }
 
-        public string Category_Name { get; set; }
+        public string CategoryName { get; set; }
 
         public int? DisplayOrder { get; set; }
     }

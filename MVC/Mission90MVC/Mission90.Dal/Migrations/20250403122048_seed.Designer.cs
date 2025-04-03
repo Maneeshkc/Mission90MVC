@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mission90.Dal.Contexts;
 
@@ -10,9 +11,11 @@ using Mission90.Dal.Contexts;
 namespace Mission90.Dal.Migrations
 {
     [DbContext(typeof(Mission90Context))]
-    partial class Mission90ContextModelSnapshot : ModelSnapshot
+    [Migration("20250403122048_seed")]
+    partial class seed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,6 +43,26 @@ namespace Mission90.Dal.Migrations
                     b.HasKey("Category_Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Category_Id = 1,
+                            CategoryName = "test1",
+                            DisplayOrder = 1
+                        },
+                        new
+                        {
+                            Category_Id = 2,
+                            CategoryName = "test2",
+                            DisplayOrder = 2
+                        },
+                        new
+                        {
+                            Category_Id = 3,
+                            CategoryName = "test3",
+                            DisplayOrder = 3
+                        });
                 });
 #pragma warning restore 612, 618
         }
