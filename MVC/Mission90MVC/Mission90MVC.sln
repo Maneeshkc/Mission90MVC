@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mission90MVC", "Mission90MVC\Mission90MVC.csproj", "{CE794F14-79FB-4AD7-BE0F-F53A6B4F3046}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mission90.Dal", "Mission90.Dal\Mission90.Dal.csproj", "{447055C4-5249-41A2-86ED-CC323C2F1061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mission90.Tests", "Mission90.Tests\Mission90.Tests.csproj", "{EC5CBB5E-E5B5-4864-80E0-81372E4C1C41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{447055C4-5249-41A2-86ED-CC323C2F1061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{447055C4-5249-41A2-86ED-CC323C2F1061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{447055C4-5249-41A2-86ED-CC323C2F1061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5CBB5E-E5B5-4864-80E0-81372E4C1C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5CBB5E-E5B5-4864-80E0-81372E4C1C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5CBB5E-E5B5-4864-80E0-81372E4C1C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5CBB5E-E5B5-4864-80E0-81372E4C1C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
