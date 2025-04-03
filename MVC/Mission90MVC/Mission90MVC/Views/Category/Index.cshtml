@@ -24,10 +24,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Category_Id)
+                @item.Category_Id
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category_Name)
+                @item.Category_Name
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DisplayOrder)

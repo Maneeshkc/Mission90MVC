@@ -14,6 +14,6 @@ namespace Mission90.Dal.Models
 
         public string Category_Name { get; set; }
 
-        public string DisplayOrder { get; set; }
+        public int? DisplayOrder { get; set; }
     }
 }

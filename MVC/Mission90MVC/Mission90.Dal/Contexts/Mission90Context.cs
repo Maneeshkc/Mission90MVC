@@ -18,6 +18,7 @@ namespace Mission90.Dal.Contexts
 
             modelBuilder.Entity<Category>().Property(x=>x.Category_Name).IsRequired();
 
+
         }
     }
 }
