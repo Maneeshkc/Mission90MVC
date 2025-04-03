@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Mission90.Dal.Contexts;
+
 namespace Mission90MVC
 {
     public class Program
@@ -9,6 +12,7 @@ namespace Mission90MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<Mission90Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Mission90MVC")));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
